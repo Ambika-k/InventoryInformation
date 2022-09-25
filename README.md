@@ -21,16 +21,22 @@ In Postman, at Body section select form-data and at key select 'File' type & 'fi
 
 ### To list all the products that the supplier has with stock
 * GET Request => http://localhost:8081/getProducts/{supplier_id}
-* Here stock count will be the sum of same product code.
-* So, even if product code is same and batch code is different, it will sum the stock quantity of both the batch codes.
-* Did in this way because in problem statement it is mentioned to give just product stock count irrespective of batch code.
+
+Here stock count will be the sum of same product code.
+
+So, even if product code is same and batch code is different, it will sum the stock quantity of both the batch codes.
+
+Did in this way because in problem statement it is mentioned to give just product stock count irrespective of batch code.
 
 ### To get product and stock based on supplier and product name 
  * GET Request => http://localhost:8081/getProducts/{supplierName}/{productName}
- * Here stock count will be the sum of same product code.
- * So, even if product code is same and batch code is different, it will sum the stock quantity of both the batch codes.
- * Did in this way because in problem statement it is mentioned to give just product stock count irrespective of batch code.
- * So this will always give only one entry.
+ 
+   Here stock count will be the sum of same product code.
+   
+   So, even if product code is same and batch code is different, it will sum the stock quantity of both the batch codes.
+   
+   Did in this way because in problem statement it is mentioned to give just product stock count irrespective of batch code.
+   So this will always give only one entry.
  
 ### To list out the products that didn’t yet expire for that supplier or list of suppliers
 * GET Request => http://localhost:8081/getProductsOfSupplier/{supplierid1,supplierid2,..}
