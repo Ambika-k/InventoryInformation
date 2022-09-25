@@ -7,8 +7,7 @@ import com.inventory.spring.entity.ProductAndStock;
 import com.inventory.spring.entity.Supplier;
 
 public interface InventoryService {
-	// public void saveAll(List<Inventory> inventoryList);
-	// public void saveAllProducts(List<ProductInfo> productInfoList);
+	
 	public void saveAllSuppliers(List<Supplier> supplierlist);
 
 	public List<ProductAndStock> getProductAndStockForSupplier(String supplierName, int pageNumber, int pageSize);
