@@ -47,7 +47,7 @@ Did in this way because in problem statement it is mentioned to give just produc
 
 Pagination can be applied to any above get methods which gives list of data.
 
-Here pageNumber starts from index 0 to n-1 and will display the data in the pageNumber you asked for.
+Here pageNumber starts from index 0 to pageSize-1 and will display the data in the pageNumber you asked for.
 
 Here pageSize represents how many objects you want to display.
 
@@ -58,6 +58,7 @@ Even if you didnt mention the pageNumber and pageSize, the default values[pagenu
 * Product_info
 
 Here Supplier Entity has OneToMany Relationship with Product Entity where One supplier can have multiple products.
+
 
 The Join table of Supplier and Product will be product_info.
 
