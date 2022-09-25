@@ -1,5 +1,8 @@
 package com.inventory.spring.entity;
-
+/*
+*This is a Auxiliary class which is used to tie up 
+*productName and stock variables
+*/
 public class NameAndInt implements ProductAndStock {
 	private String productName;
 	private int stock;
