@@ -17,16 +17,16 @@ This is a springboot application which inserts csv file into database and perfor
 ### To insert csv file into database
 * POST Request => http://localhost:8081/upload
 
-In Postman, at Body section select form-data and at key select 'File' type & 'file' in key field and in value section click on selectfiles and select the csv file which you want to insert.
+  In Postman, at Body section select form-data and at key select 'File' type & 'file' in key field and in value section click on selectfiles and select the csv file which you want to insert.
 
 ### To list all the products that the supplier has with stock
 * GET Request => http://localhost:8081/getProducts/{supplier_id}
 
-Here stock count will be the sum of same product code.
+  Here stock count will be the sum of same product code.
 
-So, even if product code is same and batch code is different, it will sum the stock quantity of both the batch codes.
+  So, even if product code is same and batch code is different, it will sum the stock quantity of both the batch codes.
 
-Did in this way because in problem statement it is mentioned to give just product stock count irrespective of batch code.
+  Did in this way because in problem statement it is mentioned to give just product stock count irrespective of batch code.
 
 ### To get product and stock based on supplier and product name 
  * GET Request => http://localhost:8081/getProducts/{supplierName}/{productName}
@@ -47,21 +47,20 @@ Did in this way because in problem statement it is mentioned to give just produc
 * http://localhost:8081/getProducts/{supplier_id}?pageNumber=0&pageSize=10
 * http://localhost:8081/getProductsOfSupplier/{supplierid1,supplierid2,..}?pageNumber=0&pageSize=15
 
-Pagination can be applied to any above get methods which gives list of data.
+  Pagination can be applied to any above get methods which gives list of data.
 
-Here pageNumber starts from index 0 to pageSize-1 and will display the data in the pageNumber you asked for.
+  Here pageNumber starts from index 0 to pageSize-1 and will display the data in the pageNumber you asked for.
 
-Here pageSize represents how many objects you want to display.
+  Here pageSize represents how many objects you want to display.
 
-Even if you didnt mention the pageNumber and pageSize, the default values[pagenumber=0, pageSize=15] will be taken and data will be displayed.
+  Even if you didnt mention the pageNumber and pageSize, the default values[pagenumber=0, pageSize=15] will be taken and data will be displayed.
 
 ### Entity Details
 * Supplier
 * Product_info
 
-Here Supplier Entity has OneToMany Relationship with Product Entity where One supplier can have multiple products.
+  Here Supplier Entity has OneToMany Relationship with Product Entity where One supplier can have multiple products.
 
+  The Join table of Supplier and Product will be product_info.
 
-The Join table of Supplier and Product will be product_info.
-
-When we retrieve the product and stock details based on Supplier name then if the list contains multiple products of same name then their stock is added and conseidered as single product.
+  When we retrieve the product and stock details based on Supplier name then if the list contains multiple products of same name then their stock is added and conseidered as single product.
