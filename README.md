@@ -9,7 +9,7 @@ This is a springboot application which inserts csv file into database and perfor
  * Postman
  
  ### Database requirements
- Install MYSQL in your system
+ Install MYSQL in your system and make below changes in application.properties.
 * spring.datasource.url=jdbc:mysql://localhost:3306/inventorydb
 * spring.datasource.username= your_username
 * spring.datasource.password= your_password
