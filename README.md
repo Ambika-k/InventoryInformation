@@ -10,9 +10,9 @@ This is a springboot application which inserts csv file into database and perfor
  
  ### Database requirements
  Install MYSQL in your system
-* spring.datasource.url=jdbc:mysql://localhost:3306/<your db> 
-* spring.datasource.username= <your username>
-* spring.datasource.password= <your password>
+* spring.datasource.url=jdbc:mysql://localhost:3306/your db 
+* spring.datasource.username= your username
+* spring.datasource.password= your password
 
 ### To insert csv file into database
 * POST Request => http://localhost:8081/upload
