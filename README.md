@@ -45,3 +45,13 @@ Here pageNumber starts from index 0 to n-1 and will display the data in the page
 Here pageSize represents how many objects you want to display.
 
 Even if you didnt mention the pageNumber and pageSize, the default values[pagenumber=0, pageSize=15] will be taken and data will be displayed.
+
+### Entity Details
+* Supplier
+* Product_info
+
+Here Supplier Entity has OneToMany Relationship with Product Entity where One supplier can have multiple products.
+
+The Join table of Supplier and Product will be product_info.
+
+When we retrieve the product and stock details based on Supplier name then if the list contains multiple products of same name then their stock is added and conseidered as single product.
