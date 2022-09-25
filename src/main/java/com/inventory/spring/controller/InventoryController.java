@@ -38,7 +38,9 @@ public class InventoryController {
 	private InventoryService inventoryService;
 
 	@PostMapping("/upload")
-	// This method is to store csv file into database
+	/*
+	 * This method is to store csv file into database
+	 */
 	public String myService(@RequestParam("file") MultipartFile file) throws Exception, ParseException {
 
 		List<Supplier> supplierList = new ArrayList<>();
@@ -80,7 +82,9 @@ public class InventoryController {
 		return "Uploaded succesfully";
 	}
 
-	// This method is to list all the products that the supplier has with stock 
+	/*
+	 * This method is to list all the products that the supplier has with stock
+	 */
 	@GetMapping(value = "/getProducts/{supplierName}", produces = { MediaType.APPLICATION_JSON_VALUE,
 			MediaType.APPLICATION_XML_VALUE })
 	public List<ProductAndStock> getProductAndStockForSupplier(@PathVariable("supplierName") String supplierName,
@@ -92,7 +96,10 @@ public class InventoryController {
 		return productNameAndStockList;
 
 	}
-	//This method is to get product and stock based on supplier and product name 
+
+	/*
+	 * This method is to get product and stock based on supplier and product name
+	 */
 	@GetMapping(value = "/getProducts/{supplierName}/{productName}", produces = { MediaType.APPLICATION_JSON_VALUE,
 			MediaType.APPLICATION_XML_VALUE })
 	public ProductAndStock getStockForProductBySupplier(@PathVariable("supplierName") String supplierName,
@@ -105,7 +112,11 @@ public class InventoryController {
 		return productNameAndStock;
 
 	}
-	//This method is to list out the products that didn’t yet expire for that supplier or list of suppliers
+
+	/*
+	 * This method is to list out the products that didn’t yet expire for that
+	 * supplier or list of suppliers
+	 */
 	@GetMapping(value = "/getProductsOfSupplier/{id}", produces = { MediaType.APPLICATION_JSON_VALUE,
 			MediaType.APPLICATION_XML_VALUE })
 	public HashSet<String> getListOfProductsBySupplier(@PathVariable("id") List<String> supplierIds,
@@ -114,6 +125,5 @@ public class InventoryController {
 
 		return inventoryService.getListOfProductsBySupplier(supplierIds, pageNumber, pageSize);
 	}
-
 
 }

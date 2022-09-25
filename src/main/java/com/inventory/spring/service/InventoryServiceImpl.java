@@ -1,4 +1,5 @@
 package com.inventory.spring.service;
+
 /*
  * This is the service layer which implements 
  * its corresponding service interface and 
@@ -31,7 +32,9 @@ public class InventoryServiceImpl implements InventoryService {
 	@Autowired
 	private InventoryRepository inventoryRepository;
 
-	// This method is to store csv file data into database
+	/*
+	 * This method is to store csv file data into database
+	 */
 	@Override
 	public void saveAllSuppliers(List<Supplier> supplierList) {
 		for (Supplier supplier : supplierList) {
@@ -40,8 +43,11 @@ public class InventoryServiceImpl implements InventoryService {
 
 	}
 
-	// This method recieves product and stock details for the supplier and it adds
-	// the stock data if both the products are same
+	/*
+	 * This method recieves product and stock details for the supplier and it adds
+	 * the stock data if both the products are same
+	 */
+
 	@Override
 	public List<ProductAndStock> getProductAndStockForSupplier(String supplierName, int pageNumber, int pageSize) {
 		List<ProductAndStock> nOrigNameAndStockList = inventoryRepository.getProductAndStockForSupplier(supplierName,
@@ -61,9 +67,12 @@ public class InventoryServiceImpl implements InventoryService {
 		return nNewNameAndStockList;
 	}
 
-	// This method returns the product and stock of supplier of particular
-	// productname and if there are any same products then stock will be added and
-	// returned.
+	/*
+	 * This method returns the product and stock of supplier of particular
+	 * productname and if there are any same products then stock will be added and
+	 * returned.
+	 */
+
 	@Override
 	public ProductAndStock getStockForProductBySupplier(String supplierName, String productName, int pageNumber,
 			int pageSize) {
@@ -78,7 +87,10 @@ public class InventoryServiceImpl implements InventoryService {
 		return nProductNameAndStock;
 	}
 
-	// This method recieves product and its expiry date from repository and if the product is expired then that product is removed from list
+	/*
+	 * This method recieves product and its expiry date from repository and if the
+	 * product is expired then that product is removed from list
+	 */
 	@Override
 	public HashSet<String> getListOfProductsBySupplier(List<String> supplierIds, int pageNumber, int pageSize) {
 
