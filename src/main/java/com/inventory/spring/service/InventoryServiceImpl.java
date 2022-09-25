@@ -108,7 +108,7 @@ public class InventoryServiceImpl implements InventoryService {
 		for (ProductAndExpiryDate productAndExpiryDate : productAndExpiryDateList) {
 			try {
 				Date expDate = new SimpleDateFormat(pattern).parse(productAndExpiryDate.getExp());
-				if (currentDate.compareTo(expDate) <= 0) { // current date is copared with expiry date
+				if (currentDate.compareTo(expDate) <= 0) { // current date is compared with expiry date
 					nNonExpiredProducts.add(productAndExpiryDate.getName());
 				}
 			} catch (Exception e) {
