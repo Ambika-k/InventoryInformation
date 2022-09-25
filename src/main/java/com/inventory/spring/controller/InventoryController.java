@@ -80,7 +80,7 @@ public class InventoryController {
 			MediaType.APPLICATION_XML_VALUE })
 	public List<ProductAndStock> getProductAndStockForSupplier(@PathVariable("supplierName") String supplierName,
 			@RequestParam(value = "pageNumber", required = false, defaultValue = "0") int pageNumber,
-			@RequestParam(value = "pageSize", required = false, defaultValue = "2") int pageSize) {
+			@RequestParam(value = "pageSize", required = false, defaultValue = "15") int pageSize) {
 
 		List<ProductAndStock> productNameAndStockList = (List<ProductAndStock>) inventoryService
 				.getProductAndStockForSupplier(supplierName, pageNumber, pageSize);
@@ -93,7 +93,7 @@ public class InventoryController {
 	public ProductAndStock getStockForProductBySupplier(@PathVariable("supplierName") String supplierName,
 			@PathVariable("productName") String productName,
 			@RequestParam(value = "pageNumber", required = true, defaultValue = "0") int pageNumber,
-			@RequestParam(value = "pageSize", required = false, defaultValue = "2") int pageSize) {
+			@RequestParam(value = "pageSize", required = false, defaultValue = "15") int pageSize) {
 
 		ProductAndStock productNameAndStock = inventoryService.getStockForProductBySupplier(supplierName, productName,
 				pageNumber, pageSize);
@@ -105,7 +105,7 @@ public class InventoryController {
 			MediaType.APPLICATION_XML_VALUE })
 	public HashSet<String> getListOfProductsBySupplier(@PathVariable("id") List<String> supplierIds,
 			@RequestParam(value = "pageNumber", required = false, defaultValue = "0") int pageNumber,
-			@RequestParam(value = "pageSize", required = false, defaultValue = "4") int pageSize) {
+			@RequestParam(value = "pageSize", required = false, defaultValue = "15") int pageSize) {
 
 		return inventoryService.getListOfProductsBySupplier(supplierIds, pageNumber, pageSize);
 	}
