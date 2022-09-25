@@ -16,6 +16,7 @@ This is a springboot application which inserts csv file into database and perfor
 
 ### To insert csv file into database
 * POST Request => http://localhost:8081/upload
+
 In Postman, at Body section select form-data and at key select 'File' type & 'file' in key field and in value section click on selectfiles and select the csv file which you want to insert.
 
 ### To list all the products that the supplier has with stock
