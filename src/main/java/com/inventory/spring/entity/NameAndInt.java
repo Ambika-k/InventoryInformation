@@ -12,13 +12,11 @@ public class NameAndInt implements ProductAndStock {
 
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
 		return productName;
 	}
 
 	@Override
 	public int getStock() {
-		// TODO Auto-generated method stub
 		return stock;
 	}
 
