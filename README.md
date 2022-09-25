@@ -33,9 +33,10 @@ In Postman, at Body section select form-data and at key select 'File' type & 'fi
 ### To list out the products that didn’t yet expire for that supplier or list of suppliers
 * GET Request => http://localhost:8081/getProductsOfSupplier/{supplierid1,supplierid2,..}
 
-### 
+### Pagination
 * http://localhost:8081/getProducts/{supplier_id}?pageNumber=0&pageSize=10
 * http://localhost:8081/getProductsOfSupplier/{supplierid1,supplierid2,..}?pageNumber=0&pageSize=15
+*
 Pagination can be applied to any get method which gives list of data.
 Here pageNumber starts from index 0 to n-1 and will display the data in the pageNumber you asked for.
 Here pageSize represents how many objects you want to display.
