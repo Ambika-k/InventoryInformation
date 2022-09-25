@@ -1,5 +1,10 @@
 package com.inventory.spring.entity;
-
+/*
+ * This is Supplier class which contains 
+ * list of productInfo.
+ * This class has OneToMany relationship
+ * with ProductInfo.
+ */
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -34,11 +39,11 @@ public class Supplier {
 		this.productInfoList = productInfoList;
 	}
 
-	public String getSupplier() {
+	public String getSupplierName() {
 		return supplierName;
 	}
 
-	public void setSupplier(String supplierName) {
+	public void setSupplierName(String supplierName) {
 		this.supplierName = supplierName;
 	}
 

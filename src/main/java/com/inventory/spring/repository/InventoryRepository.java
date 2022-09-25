@@ -1,5 +1,10 @@
 package com.inventory.spring.repository;
 
+/*
+ * This is repository layer which
+ * interacts with database.
+ */
+
 import java.util.List;
 
 import org.springframework.data.domain.Pageable;

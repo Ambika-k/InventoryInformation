@@ -1,5 +1,10 @@
 package com.inventory.spring.service;
-
+/*
+ * This is the service layer which implements 
+ * its corresponding service interface and 
+ * it contains businees logic which will 
+ * be in between controller and repository layer.
+ */
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

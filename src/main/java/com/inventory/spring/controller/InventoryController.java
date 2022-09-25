@@ -1,5 +1,10 @@
 package com.inventory.spring.controller;
 
+/*
+ * This is a controller layer which handles 
+ * the requests from users
+ */
+
 import java.io.InputStream;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -64,7 +69,7 @@ public class InventoryController {
 				supplier = new Supplier();
 				List<ProductInfo> productInfoList = new ArrayList<>();
 				supplier.setProductInfo(productInfoList);
-				supplier.setSupplier(supplierName);
+				supplier.setSupplierName(supplierName);
 				supplierList.add(supplier);
 				name2SupplierMap.put(supplierName, supplier);
 			}

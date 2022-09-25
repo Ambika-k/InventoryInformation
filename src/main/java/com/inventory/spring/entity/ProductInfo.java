@@ -121,7 +121,7 @@ public class ProductInfo implements Serializable {
 	public String toString() {
 		return "ProductInfo [productId=" + productId + ", productCode=" + productCode + ", productName=" + productName
 				+ ", batch=" + batch + ", stock=" + stock + ", expiryDate=" + expiryDate + ", supplier="
-				+ supplier.getSupplier() + "]";
+				+ supplier.getSupplierName() + "]";
 	}
 
 }
