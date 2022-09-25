@@ -16,6 +16,11 @@ import javax.persistence.ManyToOne;
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
 
+/*
+ * This Class is ProductInfo. This is member of Supplier class.
+ * Supplier Class has One2Many relationship with productInfo.
+ */
+
 @Entity
 public class ProductInfo implements Serializable {
 
