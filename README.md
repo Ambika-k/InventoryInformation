@@ -44,8 +44,8 @@ This is a springboot application which inserts csv file into database and perfor
    
    This lists all the productNames that are with suppiler that are not expired.
 ### Pagination
-* http://localhost:8081/getProducts/{supplier_id}?pageNumber=0&pageSize=10
-* http://localhost:8081/getProductsOfSupplier/{supplierid1,supplierid2,..}?pageNumber=0&pageSize=15
+* GET Request => http://localhost:8081/getProducts/{supplier_id}?pageNumber=0&pageSize=10
+* GET Request => http://localhost:8081/getProductsOfSupplier/{supplierid1,supplierid2,..}?pageNumber=0&pageSize=15
 
   Pagination can be applied to any above get methods which gives list of data.
 
